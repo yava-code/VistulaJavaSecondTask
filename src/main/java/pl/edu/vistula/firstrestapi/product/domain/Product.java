@@ -1,11 +1,16 @@
-package pl.edu.vistula.firstrestapi.product.api.domain;
+package pl.edu.vistula.firstrestapi.product.domain;
 
 public class Product {
     private Long id;
 
     private String name;
 
-    public Product() {this.name = name;}
+
+    public Product(String name) {this.name = name;}
+
+
+    public Product() {}
+
     //getters and setters
     public Long getId() {return id;}
 
@@ -15,5 +20,3 @@ public class Product {
 
     public void setName(String name) {this.name = name;}
 }
-
-//class that represents main package(product)

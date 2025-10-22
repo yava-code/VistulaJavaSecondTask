@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.edu.vistula.firstrestapi.product.api.request.ProductRequest;
 import pl.edu.vistula.firstrestapi.product.api.response.ProductResponse;
-import pl.edu.vistula.firstrestapi.product.api.service.ProductService;
+import pl.edu.vistula.firstrestapi.product.service.ProductService;
 
 @RestController
 @RequestMapping("/api/v1/products")

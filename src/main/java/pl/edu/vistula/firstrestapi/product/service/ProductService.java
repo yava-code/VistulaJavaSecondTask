@@ -1,11 +1,11 @@
-package pl.edu.vistula.firstrestapi.product.api.service;
+package pl.edu.vistula.firstrestapi.product.service;
 
 import org.springframework.stereotype.Service;
-import pl.edu.vistula.firstrestapi.product.api.domain.Product;
-import pl.edu.vistula.firstrestapi.product.api.repository.ProductRepository;
+import pl.edu.vistula.firstrestapi.product.domain.Product;
+import pl.edu.vistula.firstrestapi.product.repository.ProductRepository;
 import pl.edu.vistula.firstrestapi.product.api.request.ProductRequest;
 import pl.edu.vistula.firstrestapi.product.api.response.ProductResponse;
-import pl.edu.vistula.firstrestapi.product.api.support.ProductMapper;
+import pl.edu.vistula.firstrestapi.product.support.ProductMapper;
 @Service
 public class ProductService {
 

@@ -1,7 +1,7 @@
-package pl.edu.vistula.firstrestapi.product.api.repository;
+package pl.edu.vistula.firstrestapi.product.repository;
 
 import org.springframework.stereotype.Repository;
-import pl.edu.vistula.firstrestapi.product.api.domain.Product;
+import pl.edu.vistula.firstrestapi.product.domain.Product;
 
 import java.util.HashMap;
 import java.util.Map;
