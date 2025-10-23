@@ -1,6 +1,7 @@
 package pl.edu.vistula.firstrestapi.product.service;
 
 import org.springframework.stereotype.Service;
+import pl.edu.vistula.firstrestapi.product.api.request.UpdateProductRequest;
 import pl.edu.vistula.firstrestapi.product.domain.Product;
 import pl.edu.vistula.firstrestapi.product.repository.ProductRepository;
 import pl.edu.vistula.firstrestapi.product.api.request.ProductRequest;
@@ -25,6 +26,13 @@ public class ProductService {
 
     public ProductResponse find (Long id) {
         Product product = productRepository.findById(id).orElseThrow(ProductExceptionSupplier.productNotFound(id));
+        return productMapper.toProductResponse(product);
+    }
+
+    public ProductResponse update (Long id, UpdateProductRequest updateProductRequest) {
+        Product product = productRepository.findById(id).orElseThrow(ProductExceptionSupplier.productNotFound(id));
+        product.setName(updateProductRequest.getName());
+        productRepository.save(productMapper.toProduct(product, updateProductRequest));
         return productMapper.toProductResponse(product);
     }
 

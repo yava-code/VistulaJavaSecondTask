@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 @ControllerAdvice
 public class ProductExceptionAdvisor extends RuntimeException {
-    private static final Logger LOG = LoggerFactory.getLogger(ProductExceptionAdvisor.class);
+    private static final Logger LOG = (Logger) LoggerFactory.getLogger(ProductExceptionAdvisor.class);
 
 @ExceptionHandler(ProductNotFoundExeption.class)
 @ResponseStatus(HttpStatus.NOT_FOUND)

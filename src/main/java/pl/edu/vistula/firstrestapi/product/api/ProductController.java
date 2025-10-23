@@ -30,4 +30,12 @@ public class ProductController {
     }
 
 
+    @PutMapping("/{id}")
+    @Operation(summary = "update product by id")
+    public ResponseEntity<ProductResponse> update(@PathVariable Long id, @RequestBody UpdateProductRequest productRequest) {
+        ProductResponse productResponse = productService.update(id, productRequest);
+        return ResponseEntity.status(HttpStatus.OK).body(productResponse);
+    }
+
 }
+//TODO слайд 48 сделать скрины
