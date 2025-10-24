@@ -9,6 +9,4 @@ public class ErrorMessageResponse {
     public String getMessage() {
         return message;
     }
-
-
 }

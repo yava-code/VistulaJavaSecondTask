@@ -6,7 +6,7 @@ public class UpdateProductRequest extends ProductRequest {
     private final Long id;
 
     @JsonCreator
-    public UpdateProductRequest(String name, Lond id) {
+    public UpdateProductRequest(String name, Long id) {
         super(name);
         this.id = id;
     }
