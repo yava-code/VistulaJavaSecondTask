@@ -3,9 +3,7 @@ package pl.edu.vistula.firstrestapi.product.repository;
 import org.springframework.stereotype.Repository;
 import pl.edu.vistula.firstrestapi.product.domain.Product;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @Repository
 public class ProductRepository {
@@ -33,4 +31,10 @@ public class ProductRepository {
         return Optional.ofNullable(map.get(id));
     }
 
+    public List<Product> findAll() {
+        return new ArrayList<>(map.values());
+    }
+    public void deleteById(Long id) {
+        map.remove(id);
+    }
 }

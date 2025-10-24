@@ -8,6 +8,8 @@ import pl.edu.vistula.firstrestapi.product.api.request.ProductRequest;
 import pl.edu.vistula.firstrestapi.product.api.response.ProductResponse;
 import pl.edu.vistula.firstrestapi.product.service.ProductService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/products")
 public class ProductController {
@@ -37,5 +39,16 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.OK).body(productResponse);
     }
 
+    @GetMapping
+    @Operation(summary = "Find all products")
+    public ResponseEntity<List<ProductResponse>> findAll() {
+        List<ProductResponse> productResponse = productService.findAll();
+        return ResponseEntity.status(HttpStatus.OK).body(productResponse);
+    }
+    @DeleteMapping("/{id}")
+    @Operation(summary = "delete item")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        productService.delete(id);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 }
-//TODO слайд 48 сделать скрины
