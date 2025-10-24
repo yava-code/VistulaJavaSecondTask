@@ -1,5 +1,5 @@
 package pl.edu.vistula.firstrestapi.product.api;
-
+import pl.edu.vistula.firstrestapi.product.api.request.UpdateProductRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
